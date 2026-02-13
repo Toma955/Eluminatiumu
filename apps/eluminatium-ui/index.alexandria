@@ -1,0 +1,7 @@
+VStack(spacing: 24) {
+    Image("magnifyingglass")
+    Text("Eluminatium")
+    Text("Pretraži aplikacije ili unesi URL")
+    Divider()
+    Spacer()
+}
