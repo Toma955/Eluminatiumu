@@ -1,0 +1,20 @@
+[
+  {
+    "id": "dobrodosli",
+    "name": "Dobrodošli",
+    "description": "Početna Alexandria DSL aplikacija",
+    "zipFile": "dobrodosli.zip"
+  },
+  {
+    "id": "kalkulator",
+    "name": "Kalkulator",
+    "description": "Jednostavan kalkulator",
+    "zipFile": "kalkulator.zip"
+  },
+  {
+    "id": "notepad",
+    "name": "Notepad",
+    "description": "Bilješke",
+    "zipFile": "notepad.zip"
+  }
+]

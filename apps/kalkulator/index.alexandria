@@ -1,0 +1,11 @@
+VStack(spacing: 16) {
+    Text("Kalkulator")
+    HStack(spacing: 12) {
+        Text("Broj 1")
+        Spacer()
+        Text("Broj 2")
+    }
+    Divider()
+    Button("Zbroji") { }
+    Text("Rezultat: 0")
+}

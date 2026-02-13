@@ -1,0 +1,11 @@
+VStack(spacing: 24) {
+    Text("Dobrodošli u Alexandria")
+    Button("Klikni me") { }
+    HStack(spacing: 16) {
+        Text("Lijevo")
+        Spacer()
+        Text("Desno")
+    }
+    Divider()
+    Image("star.fill")
+}

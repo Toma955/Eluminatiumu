@@ -1,0 +1,6 @@
+VStack(spacing: 16) {
+    Text("Notepad")
+    Divider()
+    Text("Ovdje će biti TextField za bilješke...")
+    Spacer()
+}
