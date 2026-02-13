@@ -12,4 +12,4 @@ services:
       - key: UI_DIR
         value: ./apps/eluminatium-ui
       - key: CORS_ORIGIN
-        generateValue: true
+        value: ""
