@@ -1,20 +1,11 @@
 [
-  {
-    "id": "dobrodosli",
-    "name": "Dobrodošli",
-    "description": "Početna Alexandria DSL aplikacija",
-    "zipFile": "dobrodosli.zip"
-  },
-  {
-    "id": "kalkulator",
-    "name": "Kalkulator",
-    "description": "Jednostavan kalkulator",
-    "zipFile": "kalkulator.zip"
-  },
-  {
-    "id": "notepad",
-    "name": "Notepad",
-    "description": "Bilješke",
-    "zipFile": "notepad.zip"
-  }
+  {"id":"google","name":"Google","description":"Pretraživač Google","zipFile":"google.zip"},
+  {"id":"youtube","name":"YouTube","description":"Video platforma","zipFile":"youtube.zip"},
+  {"id":"gmail","name":"Gmail","description":"Email od Google","zipFile":"gmail.zip"},
+  {"id":"x","name":"X (Twitter)","description":"Društvena mreža","zipFile":"x.zip"},
+  {"id":"instagram","name":"Instagram","description":"Društvena mreža – slike i video","zipFile":"instagram.zip"},
+  {"id":"wikipedia","name":"Wikipedia","description":"Slobodna enciklopedija","zipFile":"wikipedia.zip"},
+  {"id":"dobrodosli","name":"Dobrodošli","description":"Početna Alexandria DSL aplikacija","zipFile":"dobrodosli.zip"},
+  {"id":"kalkulator","name":"Kalkulator","description":"Jednostavan kalkulator","zipFile":"kalkulator.zip"},
+  {"id":"notepad","name":"Notepad","description":"Bilješke","zipFile":"notepad.zip"}
 ]
