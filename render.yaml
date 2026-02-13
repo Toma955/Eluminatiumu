@@ -1,0 +1,6 @@
+services:
+  - type: web
+    runtime: node
+    name: eluminatium
+    buildCommand: npm install
+    startCommand: npm start
