@@ -1,8 +1,8 @@
 /**
  * Eluminatium Search Engine
  * Node.js backend za Alexandria – pretraživač aplikacija.
- * U tražilicu se upisuje ime aplikacije: ako postoji vrati je, ako ne postoji vrati "nema".
- * Mapa apps/ sadrži zipane aplikacije.
+ * Servira isključivo Swift aplikacije (index.alexandria / index.swift). Nema HTML/CSS/JS.
+ * Mapa apps/ sadrži zipane Swift aplikacije.
  */
 
 const express = require('express');
@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
   });
 });
 
-// GET /api/ui – Alexandria DSL za pretraživač (prvo se uspostavlja veza, pa se šalju Swift datoteke)
+// GET /api/ui – Swift kod za pretraživač (Alexandria format)
 app.get('/api/ui', (req, res) => {
   const dslPath = path.join(UI_DIR, 'index.alexandria');
   if (!fs.existsSync(dslPath)) {
@@ -156,7 +156,7 @@ app.get('/api/apps/:id', (req, res) => {
   res.json({ exists: true, app: addIconUrl(app, req) });
 });
 
-// GET /api/apps/:id/dsl – Alexandria DSL izvornik (za render u browseru)
+// GET /api/apps/:id/dsl – Swift izvornik (za render u Alexandria browseru)
 app.get('/api/apps/:id/dsl', (req, res) => {
   const apps = loadAppsIndex();
   const app = apps.find((a) => a.id === req.params.id);
@@ -165,7 +165,7 @@ app.get('/api/apps/:id/dsl', (req, res) => {
   }
   const dslPath = path.join(APPS_DIR, app.id, 'index.alexandria');
   if (!fs.existsSync(dslPath)) {
-    return res.status(404).json({ exists: false, message: 'DSL datoteka nije pronađena' });
+    return res.status(404).json({ exists: false, message: 'Swift datoteka nije pronađena' });
   }
   const dsl = fs.readFileSync(dslPath, 'utf8');
   res.json({ exists: true, dsl, app: { id: app.id, name: app.name } });
@@ -210,8 +210,8 @@ if (!fs.existsSync(APPS_DIR)) {
 
 app.listen(PORT, () => {
   console.log(`Eluminatium Search Engine (${NODE_ENV}): port ${PORT}`);
-  console.log(`  /api/ui – Swift/DSL za render pretraživača`);
+  console.log(`  /api/ui – Swift kod za pretraživač`);
   console.log(`  /api/search?q=... – pretraga`);
-  console.log(`  /api/apps/:id/dsl – DSL aplikacije`);
+  console.log(`  /api/apps/:id/dsl – Swift izvornik aplikacije`);
   console.log(`  /api/apps/:id/download – zip`);
 });

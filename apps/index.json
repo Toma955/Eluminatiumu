@@ -9,7 +9,7 @@
   {"id":"time","name":"Time","description":"Magazin Time","zipFile":"time.zip"},
   {"id":"spotify","name":"Spotify","description":"Muzika i podcastovi","zipFile":"spotify.zip"},
   {"id":"twitch","name":"Twitch","description":"Live streaming platforma","zipFile":"twitch.zip"},
-  {"id":"dobrodosli","name":"Dobrodošli","description":"Početna Alexandria DSL aplikacija","zipFile":"dobrodosli.zip"},
+  {"id":"dobrodosli","name":"Dobrodošli","description":"Početna Alexandria Swift aplikacija","zipFile":"dobrodosli.zip"},
   {"id":"kalkulator","name":"Kalkulator","description":"Jednostavan kalkulator","zipFile":"kalkulator.zip"},
   {"id":"notepad","name":"Notepad","description":"Bilješke","zipFile":"notepad.zip"}
 ]

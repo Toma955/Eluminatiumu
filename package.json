@@ -1,7 +1,7 @@
 {
   "name": "eluminatium-pretrazivac",
   "version": "1.0.0",
-  "description": "Eluminatium pretraživač – backend za Alexandria, servira zipane webapp-ove",
+  "description": "Eluminatium pretraživač – backend za Alexandria, servira isključivo Swift aplikacije (Alexandria format, nema HTML/CSS/JS)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

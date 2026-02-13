@@ -1,7 +1,7 @@
 VStack(spacing: 24) {
     Image("newspaper.fill")
     Text("New York Times")
-    Foreground("ff5c00") {
-        Text("Alexandria ne renderira HTML/CSS/JS")
+    Foreground("999999") {
+        Text("Alexandria aplikacija – u izradi")
     }
 }

@@ -1,7 +1,7 @@
 VStack(spacing: 24) {
     Image("play.rectangle.fill")
     Text("YouTube")
-    Foreground("ff5c00") {
-        Text("Alexandria ne renderira HTML/CSS/JS")
+    Foreground("999999") {
+        Text("Alexandria aplikacija – u izradi")
     }
 }
