@@ -28,4 +28,4 @@ Eluminatium pretražuje **isključivo svoj katalog**: `data/catalog.json` + `des
 Sve aplikacije moraju biti napisane u **Swiftu** (Alexandria format): datoteka `index.alexandria` ili `index.swift` u zipu. Alexandria (app browser) parsira Swift kod i renderira u SwiftUI. Eluminatium servira samo Swift sadržaj iz svog kataloga – nema web sadržaja.
 
 ---
-*Ažurirano za sync s Alexandria klijentom.*
+*Ažurirano za sync s Alexandria klijentom. Zadnji push: main.*
