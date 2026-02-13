@@ -24,6 +24,15 @@ const corsOptions = process.env.CORS_ORIGIN
 app.use(cors(corsOptions));
 app.use(express.json());
 
+// GET / – root (za testiranje veze, inače 404)
+app.get('/', (req, res) => {
+  res.json({
+    service: 'eluminatium-search-engine',
+    version: '1.0',
+    endpoints: ['/api/ui', '/api/search', '/api/apps', '/health']
+  });
+});
+
 // GET /api/ui – Alexandria DSL za pretraživač (prvo se uspostavlja veza, pa se šalju Swift datoteke)
 app.get('/api/ui', (req, res) => {
   const dslPath = path.join(UI_DIR, 'index.alexandria');
