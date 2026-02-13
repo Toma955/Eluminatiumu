@@ -23,3 +23,6 @@ Backend pretraživač za Alexandria browser – Swift aplikacije u zip formatu.
 
 Pretraga koristi `data/catalog.json` + `descriptions/*.json` (keywords, category).
 Kad se pronađe, Alexandria prikazuje rezultate i korisnik može instalirati i otvoriti app.
+
+---
+*Ažurirano za sync s Alexandria klijentom.*
