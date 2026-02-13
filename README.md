@@ -13,6 +13,16 @@ npm start
 
 Server: `http://localhost:3847`
 
+## Deploy na Render
+
+1. Push repo na GitHub
+2. [Render Dashboard](https://dashboard.render.com) → **New** → **Web Service**
+3. Spoji GitHub repo `Toma955/Eluminatiumu`
+4. Render automatski detektira `render.yaml` (Node, npm install, npm start)
+5. Deploy – URL: `https://eluminatium.onrender.com` (ili custom)
+
+Zatim u Alexandria: Postavke → Pretraživači → Dodaj pretraživač → URL s Rendera
+
 ## Flow
 
 1. **Alexandria otvara Eluminatium** → prvo uspostavlja vezu s backendom
