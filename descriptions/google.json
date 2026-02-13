@@ -1,0 +1,7 @@
+{
+  "id": "google",
+  "name": "Google",
+  "description": "Pretraživač Google",
+  "keywords": ["pretraga", "search", "google", "web"],
+  "category": "pretraživač"
+}
