@@ -1,7 +1,57 @@
-VStack(spacing: 24) {
-    Image("camera.fill")
-    Text("Instagram")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("Instagram")
+            Spacer()
+            Image("heart.fill")
+            Image("paperplane")
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(16) {
+            VStack(spacing: 16) {
+                HStack(spacing: 8) {
+                    Circle()
+                    Circle()
+                    Circle()
+                    Spacer()
+                }
+                Divider()
+                Grid {
+                    Frame(width: 120, height: 120) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 120, height: 120) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 120, height: 120) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 120, height: 120) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 120, height: 120) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 120, height: 120) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                }
+                Link("Otvori instagram.com", "https://www.instagram.com")
+            }
+        }
     }
 }

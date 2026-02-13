@@ -1,0 +1,53 @@
+VStack(spacing: 0) {
+    Background("003366") {
+        Padding(16) {
+            Foreground("ffffff") {
+                HStack(spacing: 16) {
+                    Text("Algebra")
+                    Spacer()
+                    Text("O nama")
+                    Text("Studiji")
+                    Text("Edukacije")
+                    Text("Kontakt")
+                    Button("Prijava") { }
+                }
+            }
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(24) {
+            VStack(spacing: 20) {
+                Text("Algebra – obrazovna grupa")
+                Text("IT školovanje, studiji, certifikacije i poslovne edukacije.")
+                Divider()
+                HStack(spacing: 16) {
+                    VStack(spacing: 8) {
+                        Image("laptop")
+                        Text("Studiji")
+                        Foreground("666666") {
+                            Text("Preddiplomski i diplomski")
+                        }
+                    }
+                    VStack(spacing: 8) {
+                        Image("book.fill")
+                        Text("Edukacije")
+                        Foreground("666666") {
+                            Text("Tečajevi i certifikati")
+                        }
+                    }
+                    VStack(spacing: 8) {
+                        Image("building.2.fill")
+                        Text("Poslovanje")
+                        Foreground("666666") {
+                            Text("Za tvrtke")
+                        }
+                    }
+                }
+                Divider()
+                Text("Kontakt: info@algebra.hr")
+                Link("Otvori algebra.hr", "https://www.algebra.hr")
+            }
+        }
+    }
+}

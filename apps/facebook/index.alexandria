@@ -1,0 +1,60 @@
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("facebook")
+            Spacer()
+            TextField("Pretraži na Facebooku")
+            Image("house.fill")
+            Image("play.rectangle.fill")
+            Image("storefront")
+            Image("person.2.fill")
+        }
+    }
+    Divider()
+    HStack(spacing: 0) {
+        VStack(spacing: 8) {
+            Padding(12) {
+                HStack(spacing: 8) {
+                    Circle()
+                    Text("Tvoje ime")
+                }
+            }
+            List {
+                Label("Početna", systemImage: "house.fill")
+                Label("Watch", systemImage: "play.rectangle.fill")
+                Label("Marketplace", systemImage: "storefront")
+                Label("Grupe", systemImage: "person.2.fill")
+            }
+        }
+        Divider()
+        ScrollView {
+            Padding(16) {
+                VStack(spacing: 12) {
+                    HStack(spacing: 12) {
+                        Circle()
+                        VStack(spacing: 2) {
+                            Text("Korisnik")
+                            Foreground("888888") {
+                                Text("Prije 2h")
+                            }
+                        }
+                        Spacer()
+                        Text("Što misliš?")
+                    }
+                    Divider()
+                    HStack(spacing: 12) {
+                        Circle()
+                        VStack(spacing: 2) {
+                            Text("Drugi korisnik")
+                            Foreground("888888") {
+                                Text("Jučer")
+                            }
+                        }
+                        Text("Status ili objava – feed kao na Facebooku.")
+                    }
+                    Link("Otvori facebook.com", "https://www.facebook.com")
+                }
+            }
+        }
+    }
+}

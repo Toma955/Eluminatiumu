@@ -1,7 +1,64 @@
-VStack(spacing: 24) {
-    Image("video.fill")
-    Text("Twitch")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("Twitch")
+            Spacer()
+            TextField("Pretraži")
+            Button("Prijava") { }
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(16) {
+            VStack(spacing: 16) {
+                Text("Kategorije koje pratite")
+                HStack(spacing: 12) {
+                    Frame(width: 280, height: 158) {
+                        Background("9146ff") {
+                            RoundedRectangle(cornerRadius: 8)
+                        }
+                    }
+                    VStack(spacing: 4) {
+                        Text("Korisnik_123")
+                        Foreground("888888") {
+                            Text("Just Chatting · 1,2k gledatelja")
+                        }
+                        Text("● UŽIVO")
+                    }
+                    Frame(width: 280, height: 158) {
+                        Background("9146ff") {
+                            RoundedRectangle(cornerRadius: 8)
+                        }
+                    }
+                    VStack(spacing: 4) {
+                        Text("Streamer_xyz")
+                        Foreground("888888") {
+                            Text("Fortnite · 3,4k gledatelja")
+                        }
+                        Text("● UŽIVO")
+                    }
+                }
+                Divider()
+                Text("Preporučeni kanali")
+                Grid {
+                    Frame(width: 200, height: 112) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 200, height: 112) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 200, height: 112) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                }
+                Link("Otvori twitch.tv", "https://www.twitch.tv")
+            }
+        }
     }
 }

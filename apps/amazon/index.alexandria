@@ -1,0 +1,57 @@
+VStack(spacing: 0) {
+    Background("232f3e") {
+        Padding(12) {
+            HStack(spacing: 12) {
+                Text("amazon")
+                TextField("Pretraži Amazon.hr")
+                Button("Traži") { }
+                Text("Košarica")
+            }
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(20) {
+            VStack(spacing: 16) {
+                HStack(spacing: 16) {
+                    Frame(width: 200, height: 200) {
+                        Background("ffffff") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    VStack(spacing: 8) {
+                        Text("Naziv proizvoda – kratki opis")
+                        Foreground("b12704") {
+                            Text("Cijena 29,99 €")
+                        }
+                        Foreground("666666") {
+                            Text("Dostava: besplatna preko 49 €")
+                        }
+                        Button("Dodaj u košaricu") { }
+                    }
+                    Spacer()
+                }
+                Divider()
+                Text("Preporučeno za tebe")
+                HStack(spacing: 12) {
+                    Frame(width: 160, height: 160) {
+                        Background("f3f3f3") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 160, height: 160) {
+                        Background("f3f3f3") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 160, height: 160) {
+                        Background("f3f3f3") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                }
+                Link("Otvori amazon.hr", "https://www.amazon.hr")
+            }
+        }
+    }
+}

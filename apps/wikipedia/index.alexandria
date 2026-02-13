@@ -1,7 +1,28 @@
-VStack(spacing: 24) {
-    Image("book.fill")
-    Text("Wikipedia")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("W")
+            Text("Wikipedia")
+            Spacer()
+            TextField("Pretraži Wikipediju")
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(24) {
+            VStack(spacing: 16) {
+                Text("Naslov članka – slobodna enciklopedija")
+                Divider()
+                Text("Uvodni odlomak članka. Ovdje bi bio prvi paragraf enciklopedijskog članka s osnovnim informacijama o temi.")
+                Text("Drugi paragraf. Detaljniji opis, povijest ili kontekst. Wikipedia format – naslovi, odlomci, reference.")
+                Divider()
+                Text("Sadržaj")
+                Text("1. Povijest")
+                Text("2. Opis")
+                Text("3. Vidi također")
+                Divider()
+                Link("Otvori wikipedia.org", "https://www.wikipedia.org")
+            }
+        }
     }
 }

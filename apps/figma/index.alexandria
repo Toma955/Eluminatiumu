@@ -1,0 +1,45 @@
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("Figma")
+            Spacer()
+            TextField("Pretraži...")
+            Button("Prijava") { }
+        }
+    }
+    Divider()
+    HStack(spacing: 0) {
+        VStack(spacing: 8) {
+            Padding(12) {
+                Text("Dizajn")
+            }
+            List {
+                Label("Recent", systemImage: "clock.fill")
+                Label("Drafts", systemImage: "doc.fill")
+                Label("Shared", systemImage: "person.2.fill")
+            }
+        }
+        Divider()
+        VStack(spacing: 0) {
+            Padding(16) {
+                Text("Canvas – povuci komponente ovdje")
+            }
+            Frame(width: 600, height: 400) {
+                Background("ffffff") {
+                    RoundedRectangle(cornerRadius: 8)
+                }
+            }
+            Foreground("666666") {
+                Padding(8) {
+                    Text("Frame 1 · 1920×1080")
+                }
+            }
+            Spacer()
+        }
+        Spacer()
+    }
+    Divider()
+    Padding(12) {
+        Link("Otvori figma.com", "https://www.figma.com")
+    }
+}

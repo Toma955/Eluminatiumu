@@ -1,7 +1,59 @@
-VStack(spacing: 24) {
-    Image("envelope.fill")
-    Text("Gmail")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    HStack(spacing: 0) {
+        VStack(spacing: 8) {
+            Padding(16) {
+                Button("Sastavi") { }
+            }
+            Divider()
+            List {
+                Label("Primljeno", systemImage: "tray.fill")
+                Label("Poslano", systemImage: "paperplane.fill")
+                Label("Nacrti", systemImage: "doc.fill")
+            }
+        }
+        Divider()
+        ScrollView {
+            Padding(16) {
+                VStack(spacing: 12) {
+                    HStack(spacing: 12) {
+                        Text("●")
+                        VStack(spacing: 2) {
+                            Text("Google – Tvoja potvrda")
+                            Foreground("666666") {
+                                Text("Tvoja potvrda za Google račun...")
+                            }
+                        }
+                        Spacer()
+                        Text("10:32")
+                    }
+                    HStack(spacing: 12) {
+                        Text("○")
+                        VStack(spacing: 2) {
+                            Text("YouTube – preporuke")
+                            Foreground("666666") {
+                                Text("Nove preporuke za tebe...")
+                            }
+                        }
+                        Spacer()
+                        Text("jučer")
+                    }
+                    HStack(spacing: 12) {
+                        Text("○")
+                        VStack(spacing: 2) {
+                            Text("Netflix")
+                            Foreground("666666") {
+                                Text("Nova serija je dostupna...")
+                            }
+                        }
+                        Spacer()
+                        Text("pon")
+                    }
+                }
+            }
+        }
+    }
+    Divider()
+    Padding(12) {
+        Link("Otvori mail.google.com", "https://mail.google.com")
     }
 }

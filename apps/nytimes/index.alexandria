@@ -1,7 +1,39 @@
-VStack(spacing: 24) {
-    Image("newspaper.fill")
-    Text("New York Times")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("The New York Times")
+            Spacer()
+            Button("Prijava") { }
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(20) {
+            VStack(spacing: 16) {
+                Text("Glavna vijest dana – naslov članka")
+                Foreground("666666") {
+                    Text("Podnaslov ili sažetak vijesti. Datum i autor.")
+                }
+                Divider()
+                Text("Prvi odlomak vijesti. Ovdje bi bio uvodni tekst članka u stilu NYT – vijesti, analize, komentari.")
+                Text("Nastavak članka. Drugi paragraf s više detalja i konteksta.")
+                Divider()
+                Text("Ostale vijesti")
+                HStack(spacing: 12) {
+                    Frame(width: 160, height: 100) {
+                        Background("eeeeee") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    VStack(spacing: 2) {
+                        Text("Druga vijest – kratki naslov")
+                        Foreground("888888") {
+                            Text("Kratki opis...")
+                        }
+                    }
+                }
+                Link("Otvori nytimes.com", "https://www.nytimes.com")
+            }
+        }
     }
 }

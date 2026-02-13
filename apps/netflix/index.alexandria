@@ -1,0 +1,61 @@
+VStack(spacing: 0) {
+    Background("141414") {
+        Padding(16) {
+            HStack(spacing: 16) {
+                Text("NETFLIX")
+                Spacer()
+                Text("Serije")
+                Text("Filmovi")
+                Text("Moja lista")
+                Button("Prijava") { }
+            }
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(24) {
+            VStack(spacing: 20) {
+                Text("Popularno na Netflixu")
+                HStack(spacing: 12) {
+                    Frame(width: 240, height: 135) {
+                        Background("e50914") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    VStack(spacing: 4) {
+                        Text("Naslov serije ili filma")
+                        Foreground("888888") {
+                            Text("Opis – drama, 2024")
+                        }
+                        Button("Reproduciraj") { }
+                    }
+                    Frame(width: 240, height: 135) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 240, height: 135) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                }
+                Divider()
+                Text("Nastavi gledati")
+                HStack(spacing: 12) {
+                    Frame(width: 160, height: 90) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    Frame(width: 160, height: 90) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                }
+                Link("Otvori netflix.com", "https://www.netflix.com")
+            }
+        }
+    }
+}

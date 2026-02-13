@@ -1,7 +1,30 @@
-VStack(spacing: 24) {
-    Image("clock.fill")
-    Text("Time")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("TIME")
+            Spacer()
+            TextField("Pretraži")
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(24) {
+            VStack(spacing: 16) {
+                Text("Naslov naslovnice – časopis TIME")
+                Frame(width: 400, height: 220) {
+                    Background("1a1a1a") {
+                        RoundedRectangle(cornerRadius: 8)
+                    }
+                }
+                Text("Podnaslov ili lead članka. Magazinski format – dugi članci, reportaže, analize.")
+                Text("Prvi odlomak. TIME stil – ljudske priče, politika, kultura, znanost.")
+                Divider()
+                Text("Najčitanije")
+                Text("1. Članak jedan")
+                Text("2. Članak dva")
+                Text("3. Članak tri")
+                Link("Otvori time.com", "https://time.com")
+            }
+        }
     }
 }

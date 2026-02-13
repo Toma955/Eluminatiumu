@@ -1,7 +1,58 @@
-VStack(spacing: 24) {
-    Image("music.note")
-    Text("Spotify")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    HStack(spacing: 0) {
+        VStack(spacing: 8) {
+            Padding(16) {
+                Text("Spotify")
+            }
+            Divider()
+            List {
+                Label("Domov", systemImage: "house.fill")
+                Label("Pretraži", systemImage: "magnifyingglass")
+                Label("Tvoja knjižnica", systemImage: "books.vertical.fill")
+            }
+        }
+        Divider()
+        ScrollView {
+            Padding(16) {
+                VStack(spacing: 16) {
+                    Text("Dobrodošli na Spotify")
+                    HStack(spacing: 12) {
+                        Frame(width: 160, height: 160) {
+                            Background("1db954") {
+                                RoundedRectangle(cornerRadius: 8)
+                            }
+                        }
+                        VStack(spacing: 4) {
+                            Text("Naslov pjesme")
+                            Foreground("888888") {
+                                Text("Izvođač · Album")
+                            }
+                            Button("Reproduciraj") { }
+                        }
+                        Spacer()
+                    }
+                    Divider()
+                    Text("Nastavi slušati")
+                    HStack(spacing: 12) {
+                        Frame(width: 80, height: 80) {
+                            Background("333333") {
+                                RoundedRectangle(cornerRadius: 4)
+                            }
+                        }
+                        Frame(width: 80, height: 80) {
+                            Background("333333") {
+                                RoundedRectangle(cornerRadius: 4)
+                            }
+                        }
+                        Frame(width: 80, height: 80) {
+                            Background("333333") {
+                                RoundedRectangle(cornerRadius: 4)
+                            }
+                        }
+                    }
+                    Link("Otvori open.spotify.com", "https://open.spotify.com")
+                }
+            }
+        }
     }
 }

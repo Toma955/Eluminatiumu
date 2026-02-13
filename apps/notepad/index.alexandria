@@ -1,6 +1,18 @@
-VStack(spacing: 16) {
-    Text("Notepad")
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("Notepad")
+            Spacer()
+            Button("Spremi") { }
+        }
+    }
     Divider()
-    Text("Ovdje će biti TextField za bilješke...")
+    Padding(16) {
+        VStack(spacing: 8) {
+            TextField("Naslov bilješke")
+            Divider()
+            TextEditor(placeholder: "Napiši bilješku ovdje. Jednostavan bilježnik u originalnoj formi.")
+        }
+    }
     Spacer()
 }

@@ -1,7 +1,18 @@
 VStack(spacing: 24) {
+    Spacer()
     Image("globe")
     Text("Google")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+    TextField("Pretraži Google ili upiši URL")
+    HStack(spacing: 12) {
+        Button("Pretraži Google") { }
+        Button("Sretnem se") { }
     }
+    Spacer()
+    Foreground("666666") {
+        VStack(spacing: 4) {
+            Text("Hrvatska")
+            Text("Otvori google.hr")
+        }
+    }
+    Link("google.hr", "https://www.google.hr")
 }

@@ -1,7 +1,49 @@
-VStack(spacing: 24) {
-    Image("play.rectangle.fill")
-    Text("YouTube")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    Background("1a1a1a") {
+        Padding(16) {
+            HStack(spacing: 16) {
+                Image("play.rectangle.fill")
+                Text("YouTube")
+                Spacer()
+                TextField("Pretraži")
+                Button("Prijava") { }
+            }
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(20) {
+            VStack(spacing: 20) {
+                Text("Preporučeno")
+                HStack(spacing: 16) {
+                    Frame(width: 280, height: 158) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 8)
+                        }
+                    }
+                    VStack(spacing: 4) {
+                        Text("Naslov videa – kanal")
+                        Foreground("888888") {
+                            Text("Pregledi · prije 2 dana")
+                        }
+                    }
+                    Spacer()
+                    Frame(width: 280, height: 158) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 8)
+                        }
+                    }
+                    VStack(spacing: 4) {
+                        Text("Drugi video – drugi kanal")
+                        Foreground("888888") {
+                            Text("Pregledi · prije 1 tjedan")
+                        }
+                    }
+                }
+                Divider()
+                Text("Otvori pravi YouTube:")
+                Link("youtube.com", "https://www.youtube.com")
+            }
+        }
     }
 }

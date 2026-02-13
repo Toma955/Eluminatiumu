@@ -1,7 +1,47 @@
-VStack(spacing: 24) {
-    Image("bubble.left.fill")
-    Text("X (Twitter)")
-    Foreground("999999") {
-        Text("Alexandria aplikacija – u izradi")
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Image("bubble.left.and.bubble.right.fill")
+            Text("X")
+            Spacer()
+            TextField("Pretraži")
+            Button("Post") { }
+        }
+    }
+    Divider()
+    ScrollView {
+        Padding(16) {
+            VStack(spacing: 16) {
+                HStack(spacing: 12) {
+                    Circle()
+                    VStack(spacing: 2) {
+                        HStack(spacing: 4) {
+                            Text("Korisnik")
+                            Foreground("888888") {
+                                Text("@korisnik · 2h")
+                            }
+                        }
+                        Text("Ovo je primjer tweet-a. Feed poruka kao na X (Twitter).")
+                    }
+                    Spacer()
+                }
+                Divider()
+                HStack(spacing: 12) {
+                    Circle()
+                    VStack(spacing: 2) {
+                        HStack(spacing: 4) {
+                            Text("Drugi korisnik")
+                            Foreground("888888") {
+                                Text("@drugi · 5h")
+                            }
+                        }
+                        Text("Drugi tweet u feedu – replika ili nova tema.")
+                    }
+                    Spacer()
+                }
+                Divider()
+                Link("Otvori x.com", "https://x.com")
+            }
+        }
     }
 }

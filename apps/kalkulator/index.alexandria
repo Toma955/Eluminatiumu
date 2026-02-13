@@ -1,11 +1,43 @@
 VStack(spacing: 16) {
     Text("Kalkulator")
-    HStack(spacing: 12) {
-        Text("Broj 1")
-        Spacer()
-        Text("Broj 2")
-    }
     Divider()
-    Button("Zbroji") { }
-    Text("Rezultat: 0")
+    ZStack {
+        Frame(width: 320, height: 60) {
+            Background("222222") {
+                RoundedRectangle(cornerRadius: 8)
+            }
+        }
+        Foreground("ffffff") {
+            Text("0")
+        }
+    }
+    HStack(spacing: 12) {
+        Button("C") { }
+        Button("±") { }
+        Button("%") { }
+        Button("÷") { }
+    }
+    HStack(spacing: 12) {
+        Button("7") { }
+        Button("8") { }
+        Button("9") { }
+        Button("×") { }
+    }
+    HStack(spacing: 12) {
+        Button("4") { }
+        Button("5") { }
+        Button("6") { }
+        Button("−") { }
+    }
+    HStack(spacing: 12) {
+        Button("1") { }
+        Button("2") { }
+        Button("3") { }
+        Button("+") { }
+    }
+    HStack(spacing: 12) {
+        Button("0") { }
+        Button(",") { }
+        Button("=") { }
+    }
 }

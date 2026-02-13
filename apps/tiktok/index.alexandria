@@ -1,0 +1,49 @@
+VStack(spacing: 0) {
+    Padding(12) {
+        HStack(spacing: 12) {
+            Text("TikTok")
+            Spacer()
+            TextField("Pretraži")
+            Image("person.fill")
+        }
+    }
+    Divider()
+    ScrollView {
+        VStack(spacing: 16) {
+            HStack(spacing: 12) {
+                Frame(width: 200, height: 355) {
+                    Background("000000") {
+                        RoundedRectangle(cornerRadius: 8)
+                    }
+                }
+                VStack(spacing: 8) {
+                    Circle()
+                    Text("+")
+                    Image("heart.fill")
+                    Text("123")
+                    Image("bubble.right.fill")
+                    Text("45")
+                    Image("arrow.turn.up.right")
+                    Text("Share")
+                }
+                Spacer()
+                Frame(width: 200, height: 355) {
+                    Background("222222") {
+                        RoundedRectangle(cornerRadius: 8)
+                    }
+                }
+                VStack(spacing: 4) {
+                    Text("@korisnik")
+                    Text("Opis kratkog videa #hashtag")
+                    Foreground("888888") {
+                        Text("Pjesma · Originalni zvuk")
+                    }
+                }
+            }
+            Divider()
+            Padding(16) {
+                Link("Otvori tiktok.com", "https://www.tiktok.com")
+            }
+        }
+    }
+}
