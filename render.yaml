@@ -7,3 +7,9 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
+      - key: APPS_DIR
+        value: ./apps
+      - key: UI_DIR
+        value: ./apps/eluminatium-ui
+      - key: CORS_ORIGIN
+        generateValue: true
