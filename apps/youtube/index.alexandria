@@ -1,3 +1,7 @@
-VStack(spacing: 0) {
-    WebView("https://www.youtube.com")
+VStack(spacing: 24) {
+    Image("play.rectangle.fill")
+    Text("YouTube")
+    Foreground("ff5c00") {
+        Text("Alexandria ne renderira HTML/CSS/JS")
+    }
 }

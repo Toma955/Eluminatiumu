@@ -1,3 +1,7 @@
-VStack(spacing: 0) {
-    WebView("https://www.google.com")
+VStack(spacing: 24) {
+    Image("globe")
+    Text("Google")
+    Foreground("ff5c00") {
+        Text("Alexandria ne renderira HTML/CSS/JS")
+    }
 }

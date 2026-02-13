@@ -1,3 +1,7 @@
-VStack(spacing: 0) {
-    WebView("https://www.twitch.tv")
+VStack(spacing: 24) {
+    Image("video.fill")
+    Text("Twitch")
+    Foreground("ff5c00") {
+        Text("Alexandria ne renderira HTML/CSS/JS")
+    }
 }

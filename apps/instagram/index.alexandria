@@ -1,3 +1,7 @@
-VStack(spacing: 0) {
-    WebView("https://www.instagram.com")
+VStack(spacing: 24) {
+    Image("camera.fill")
+    Text("Instagram")
+    Foreground("ff5c00") {
+        Text("Alexandria ne renderira HTML/CSS/JS")
+    }
 }
