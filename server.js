@@ -1,8 +1,7 @@
 /**
- * Eluminatium Search Engine
- * Node.js backend za Alexandria – pretraživač aplikacija.
- * Servira isključivo Swift aplikacije (index.alexandria / index.swift). Nema HTML/CSS/JS.
- * Mapa apps/ sadrži zipane Swift aplikacije.
+ * Eluminatium – pretraživač kataloga za Alexandria (app browser).
+ * Pretražuje isključivo svoj katalog (data/catalog, apps). Nema pretrage na webu.
+ * Servira Swift aplikacije (index.alexandria / index.swift).
  */
 
 const express = require('express');
@@ -97,7 +96,7 @@ function buildSearchIndex(apps) {
   }));
 }
 
-// Pretraga – catalog + descriptions + keywords; rezultati se šalju na Alexandria browser
+// Pretraga samo u katalogu (catalog + descriptions + keywords) – ne na webu
 app.get('/api/search', (req, res) => {
   const q = (req.query.q || '').toLowerCase().trim();
   const apps = loadAppsIndex();
@@ -139,7 +138,7 @@ app.get('/api/icons/:id', (req, res) => {
   res.sendFile(iconPath);
 });
 
-// GET /api/apps – lista svih aplikacija (s iconUrl za Alexandria browser)
+// GET /api/apps – lista svih aplikacija iz kataloga (s iconUrl)
 app.get('/api/apps', (req, res) => {
   const apps = loadAppsIndex();
   const withIconUrl = apps.map((a) => addIconUrl(a, req));
@@ -156,7 +155,7 @@ app.get('/api/apps/:id', (req, res) => {
   res.json({ exists: true, app: addIconUrl(app, req) });
 });
 
-// GET /api/apps/:id/dsl – Swift izvornik (za render u Alexandria browseru)
+// GET /api/apps/:id/dsl – Swift izvornik (za Alexandria app browser)
 app.get('/api/apps/:id/dsl', (req, res) => {
   const apps = loadAppsIndex();
   const app = apps.find((a) => a.id === req.params.id);
