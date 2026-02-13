@@ -13,6 +13,16 @@ npm start
 
 Server: `http://localhost:3847`
 
+## Varijable okruženja
+
+| Varijabla | Default | Opis |
+|-----------|---------|------|
+| `PORT` | `3847` | Port (Render postavlja automatski) |
+| `NODE_ENV` | `development` | `production` / `development` |
+| `APPS_DIR` | `./apps` | Putanja do mape s aplikacijama |
+| `UI_DIR` | `{APPS_DIR}/eluminatium-ui` | Putanja do UI pretraživača |
+| `CORS_ORIGIN` | *(sve)* | Dozvoljeni origini, odvojeni zarezom (npr. `https://app.example.com`) |
+
 ## Deploy na Render
 
 1. Push repo na GitHub

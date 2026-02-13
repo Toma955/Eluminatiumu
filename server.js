@@ -12,12 +12,17 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3847;
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
-app.use(cors());
+const APPS_DIR = process.env.APPS_DIR || path.join(__dirname, 'apps');
+const UI_DIR = process.env.UI_DIR || path.join(APPS_DIR, 'eluminatium-ui');
+
+const corsOptions = process.env.CORS_ORIGIN
+  ? { origin: process.env.CORS_ORIGIN.split(',').map((o) => o.trim()) }
+  : {};
+
+app.use(cors(corsOptions));
 app.use(express.json());
-
-const APPS_DIR = path.join(__dirname, 'apps');
-const UI_DIR = path.join(__dirname, 'apps', 'eluminatium-ui');
 
 // GET /api/ui – Alexandria DSL za pretraživač (prvo se uspostavlja veza, pa se šalju Swift datoteke)
 app.get('/api/ui', (req, res) => {
@@ -119,9 +124,9 @@ if (!fs.existsSync(APPS_DIR)) {
 }
 
 app.listen(PORT, () => {
-  console.log(`Eluminatium Search Engine: http://localhost:${PORT}`);
-  console.log(`  /api/ui – Swift/DSL datoteke za render pretraživača (prvo se poziva)`);
-  console.log(`  /api/search?q=... – pretraga (postoji → apps, nema → exists: false)`);
+  console.log(`Eluminatium Search Engine (${NODE_ENV}): port ${PORT}`);
+  console.log(`  /api/ui – Swift/DSL za render pretraživača`);
+  console.log(`  /api/search?q=... – pretraga`);
   console.log(`  /api/apps/:id/dsl – DSL aplikacije`);
   console.log(`  /api/apps/:id/download – zip`);
 });
