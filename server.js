@@ -9,6 +9,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
+const archiver = require('archiver');
 
 const app = express();
 const PORT = process.env.PORT || 3847;
@@ -170,18 +171,32 @@ app.get('/api/apps/:id/dsl', (req, res) => {
   res.json({ exists: true, dsl, app: { id: app.id, name: app.name } });
 });
 
-// GET /api/apps/:id/download – preuzmi zip
+// GET /api/apps/:id/download – preuzmi zip (ako ne postoji, kreira iz mape)
 app.get('/api/apps/:id/download', (req, res) => {
   const apps = loadAppsIndex();
   const app = apps.find((a) => a.id === req.params.id);
-  if (!app || !app.zipFile) {
+  if (!app) {
     return res.status(404).json({ exists: false, message: 'Nema' });
   }
-  const zipPath = path.join(APPS_DIR, app.zipFile);
-  if (!fs.existsSync(zipPath)) {
-    return res.status(404).json({ exists: false, message: 'Zip nije pronađen' });
+  const zipPath = path.join(APPS_DIR, app.zipFile || `${app.id}.zip`);
+  const folderPath = path.join(APPS_DIR, app.id);
+
+  if (fs.existsSync(zipPath)) {
+    return res.download(zipPath, path.basename(zipPath));
   }
-  res.download(zipPath, path.basename(app.zipFile));
+  if (fs.existsSync(folderPath) && fs.statSync(folderPath).isDirectory()) {
+    res.setHeader('Content-Type', 'application/zip');
+    res.setHeader('Content-Disposition', `attachment; filename="${app.id}.zip"`);
+    const archive = archiver('zip', { zlib: { level: 9 } });
+    archive.on('error', (err) => {
+      res.status(500).json({ exists: false, message: err.message });
+    });
+    archive.pipe(res);
+    archive.directory(folderPath, false);
+    archive.finalize();
+    return;
+  }
+  res.status(404).json({ exists: false, message: 'Zip ili mapa aplikacije nije pronađena' });
 });
 
 // GET /health
