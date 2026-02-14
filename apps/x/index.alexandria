@@ -12,30 +12,44 @@ VStack(spacing: 0) {
     ScrollView {
         Padding(16) {
             VStack(spacing: 16) {
-                HStack(spacing: 12) {
+                HStack(alignment: .top, spacing: 12) {
                     Circle()
-                    VStack(spacing: 2) {
+                    VStack(alignment: .leading, spacing: 4) {
                         HStack(spacing: 4) {
-                            Text("Korisnik")
+                            Text("TechNews")
                             Foreground("888888") {
-                                Text("@korisnik · 2h")
+                                Text("@technews · 2h")
                             }
                         }
-                        Text("Ovo je primjer tweet-a. Feed poruka kao na X (Twitter).")
+                        Text("Nova verzija sustava donosi poboljsanja baterije i brzinu. Korisnici izvjestavaju o smanjenju potrosnje. Detalji u clanku.")
                     }
                     Spacer()
                 }
                 Divider()
-                HStack(spacing: 12) {
+                HStack(alignment: .top, spacing: 12) {
                     Circle()
-                    VStack(spacing: 2) {
+                    VStack(alignment: .leading, spacing: 4) {
                         HStack(spacing: 4) {
-                            Text("Drugi korisnik")
+                            Text("Weather_Center")
                             Foreground("888888") {
-                                Text("@drugi · 5h")
+                                Text("@weather · 5h")
                             }
                         }
-                        Text("Drugi tweet u feedu – replika ili nova tema.")
+                        Text("Upozorenje: jaka bura u primorju do sutra navecer. Maksimalni udari do 120 km/h. Izbjegavajte putovanja.")
+                    }
+                    Spacer()
+                }
+                Divider()
+                HStack(alignment: .top, spacing: 12) {
+                    Circle()
+                    VStack(alignment: .leading, spacing: 4) {
+                        HStack(spacing: 4) {
+                            Text("Sport_Live")
+                            Foreground("888888") {
+                                Text("@sportlive · 9h")
+                            }
+                        }
+                        Text("Poluvrijeme: 1–0. Gol u 43. minuti. Domacin ima vise posjeda, gosti opasni na kontrama.")
                     }
                     Spacer()
                 }

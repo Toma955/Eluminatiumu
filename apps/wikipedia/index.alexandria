@@ -1,3 +1,4 @@
+// Wikipedia – webapp s više članaka; puni tekst, klik otvara / vodi dalje
 VStack(spacing: 0) {
     Padding(12) {
         HStack(spacing: 12) {
@@ -10,16 +11,32 @@ VStack(spacing: 0) {
     Divider()
     ScrollView {
         Padding(24) {
-            VStack(spacing: 16) {
-                Text("Naslov članka – slobodna enciklopedija")
+            VStack(alignment: .leading, spacing: 28) {
+                Text("Slobodna enciklopedija")
                 Divider()
-                Text("Uvodni odlomak članka. Ovdje bi bio prvi paragraf enciklopedijskog članka s osnovnim informacijama o temi.")
-                Text("Drugi paragraf. Detaljniji opis, povijest ili kontekst. Wikipedia format – naslovi, odlomci, reference.")
+                Text("Europska unija")
+                Foreground("888888") {
+                    Text("Iz „Europska unija“, slobodna enciklopedija.")
+                }
+                Text("Europska unija (EU) je politička i ekonomska unija 27 država članica koje se nalaze uglavnom u Europi. Nastala je nakon Drugoga svjetskog rata kroz niz ugovora, a danas obuhvaća jedinstveno tržište, carinsku uniju, zajedničku poljoprivrednu politiku i dio zemalja koristi zajedničku valutu – euro. Sjedište glavnih institucija je u Bruxellesu, Strasbourgu i Luxembourgu.")
+                Text("Povijest Europske unije započinje 1951. Ugovorom o utemeljenju Europske zajednice za ugljen i čelik. Potpisale su ga Belgija, Francuska, Italija, Luksemburg, Nizozemska i Zapadna Njemačka. Proširenja su slijedila u nekoliko valova; Hrvatska je pristupila 2013. Ujedinjeno Kraljevstvo je napustilo Uniju 2020. (Brexit).")
+                Link("Pročitaj cijeli članak na wikipedia.org", "https://www.wikipedia.org")
                 Divider()
-                Text("Sadržaj")
-                Text("1. Povijest")
-                Text("2. Opis")
-                Text("3. Vidi također")
+                Text("Umjetna inteligencija")
+                Foreground("888888") {
+                    Text("Iz „Umjetna inteligencija“, slobodna enciklopedija.")
+                }
+                Text("Umjetna inteligencija (AI) je grana računalne znanosti koja se bavi stvaranjem sustava sposobnih za zadatke koji obično zahtijevaju ljudsku inteligenciju: prepoznavanje govora, odluke, prijevod, igre. Pojam je skovao John McCarthy 1956. na konferenciji u Dartmouthu.")
+                Text("Područja uključuju strojno učenje, duboko učenje, obradu prirodnog jezika i robotiku. Primjene su u medicini, autonomnoj vožnji, preporučivanju sadržaja i industriji. Etika i regulacija AI postaju sve važnije teme u društvenoj raspravi.")
+                Link("Pročitaj cijeli članak na wikipedia.org", "https://www.wikipedia.org")
+                Divider()
+                Text("New York")
+                Foreground("888888") {
+                    Text("Iz „New York (grad)“, slobodna enciklopedija.")
+                }
+                Text("New York je najnaseljeniji grad Sjedinjenih Američkih Država i jedno od glavnih svjetskih središta kulture, financija i medija. Nalazi se na ušću rijeke Hudson; sastoji se od pet četvrti: Manhattan, Brooklyn, Queens, Bronx i Staten Island. Procijenjeno stanovništvo prema popisu iz 2020. prelazi 8,2 milijuna.")
+                Text("Grad je osnovan kao trgovačka postaja Nizozemaca 1624. Pod britanskom vlašću postao je New York. Statua slobode, podignuta 1886., jedan je od simbola grada. Broadway, Wall Street, Central Park i brojni muzeji dio su svjetske baštine.")
+                Link("Pročitaj cijeli članak na wikipedia.org", "https://www.wikipedia.org")
                 Divider()
                 Link("Otvori wikipedia.org", "https://www.wikipedia.org")
             }

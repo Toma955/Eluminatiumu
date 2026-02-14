@@ -1,3 +1,4 @@
+// Instagram – webapp s feedom; više objava s opisima, klik otvara
 VStack(spacing: 0) {
     Padding(12) {
         HStack(spacing: 12) {
@@ -10,7 +11,7 @@ VStack(spacing: 0) {
     Divider()
     ScrollView {
         Padding(16) {
-            VStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 20) {
                 HStack(spacing: 8) {
                     Circle()
                     Circle()
@@ -18,22 +19,40 @@ VStack(spacing: 0) {
                     Spacer()
                 }
                 Divider()
-                Grid {
-                    Frame(width: 120, height: 120) {
-                        Background("333333") {
-                            RoundedRectangle(cornerRadius: 4)
+                HStack(alignment: .top, spacing: 12) {
+                    Circle()
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("travel_daily")
+                        Frame(width: 320, height: 320) {
+                            Background("333333") {
+                                RoundedRectangle(cornerRadius: 8)
+                            }
+                        }
+                        Text("Sunset u Dubrovniku. Stari grad nikad ne razočara. #dubrovnik #hrvatska #putovanja")
+                        Foreground("888888") {
+                            Text("Sviđa mi se: 1.234 · Prije 5h")
                         }
                     }
-                    Frame(width: 120, height: 120) {
-                        Background("333333") {
-                            RoundedRectangle(cornerRadius: 4)
+                }
+                Divider()
+                HStack(alignment: .top, spacing: 12) {
+                    Circle()
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("food_stories")
+                        Frame(width: 320, height: 320) {
+                            Background("2a2a2a") {
+                                RoundedRectangle(cornerRadius: 8)
+                            }
+                        }
+                        Text("Domaca pasta s tartufima. Recept u storyju. Hvala @restoran_xyz na savjetima.")
+                        Foreground("888888") {
+                            Text("Sviđa mi se: 892 · Jučer")
                         }
                     }
-                    Frame(width: 120, height: 120) {
-                        Background("333333") {
-                            RoundedRectangle(cornerRadius: 4)
-                        }
-                    }
+                }
+                Divider()
+                Text("Objave")
+                HStack(spacing: 8) {
                     Frame(width: 120, height: 120) {
                         Background("333333") {
                             RoundedRectangle(cornerRadius: 4)

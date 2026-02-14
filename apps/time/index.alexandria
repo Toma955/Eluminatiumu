@@ -10,19 +10,21 @@ VStack(spacing: 0) {
     ScrollView {
         Padding(24) {
             VStack(spacing: 16) {
-                Text("Naslov naslovnice – časopis TIME")
+                Text("Kako su lideri 2025. oblikovali buducnost")
                 Frame(width: 400, height: 220) {
                     Background("1a1a1a") {
                         RoundedRectangle(cornerRadius: 8)
                     }
                 }
-                Text("Podnaslov ili lead članka. Magazinski format – dugi članci, reportaže, analize.")
-                Text("Prvi odlomak. TIME stil – ljudske priče, politika, kultura, znanost.")
+                Text("Godisnja lista TIME-a: ljudi i ideje koji su najvise utjecali na svijet. Od tehnologije do klimatske politike, od medicine do kulture.")
+                Text("U ovom izdanju razgovaramo s deset osoba koje su u protekloj godini donijele odluke s globalnim posljedicama. Njihove price – uspjesi i neuspjesi – pomazu nam razumjeti kuda idemo.")
                 Divider()
-                Text("Najčitanije")
-                Text("1. Članak jedan")
-                Text("2. Članak dva")
-                Text("3. Članak tri")
+                Text("Najcitanie")
+                Text("1. CEO tvrtke koja je promijenila industriju: intervju u punom trajanju")
+                Text("2. Znanstvenica koja je pronasla nacin da zaustavimo bolest: reportaza iz laboratorija")
+                Text("3. Politicar koji je riskirao sve za mir: analiza jedne odluke")
+                Text("4. Umjetnik godine: kako je jedan film potresao industriju")
+                Text("5. Klimatski aktivist koji je okupirao pozornicu")
                 Link("Otvori time.com", "https://time.com")
             }
         }

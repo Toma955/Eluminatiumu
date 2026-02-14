@@ -1,3 +1,4 @@
+// Gmail – webapp s inboxom; više mailova s punim predmetom i sažetkom, klik učitava
 VStack(spacing: 0) {
     HStack(spacing: 0) {
         VStack(spacing: 8) {
@@ -14,39 +15,53 @@ VStack(spacing: 0) {
         Divider()
         ScrollView {
             Padding(16) {
-                VStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 12) {
                     HStack(spacing: 12) {
                         Text("●")
-                        VStack(spacing: 2) {
-                            Text("Google – Tvoja potvrda")
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Google – Tvoja potvrda za prijavu")
                             Foreground("666666") {
-                                Text("Tvoja potvrda za Google račun...")
+                                Text("Zdravo, primili smo zahtjev za prijavu na tvoj Google račun s novog uređaja. Ako si to bio ti, unesi ovaj kod: 847291. Kod istječe za 10 minuta.")
                             }
                         }
                         Spacer()
                         Text("10:32")
                     }
+                    Divider()
                     HStack(spacing: 12) {
                         Text("○")
-                        VStack(spacing: 2) {
-                            Text("YouTube – preporuke")
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("YouTube – Preporuke za ovaj tjedan")
                             Foreground("666666") {
-                                Text("Nove preporuke za tebe...")
+                                Text("Evo videa koje bismo ti preporučili na temelju tvoje povijesti. Nova serija, glazba i tutorijali. Pogledaj u aplikaciji ili na webu.")
                             }
                         }
                         Spacer()
                         Text("jučer")
                     }
+                    Divider()
                     HStack(spacing: 12) {
                         Text("○")
-                        VStack(spacing: 2) {
-                            Text("Netflix")
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Netflix – Nova sezona je ovdje")
                             Foreground("666666") {
-                                Text("Nova serija je dostupna...")
+                                Text("Druga sezona serije koju pratiš sada je dostupna. Nastavak priče donosi nova otkrića i obrte. Dodaj u listu i gledaj kad god želiš.")
                             }
                         }
                         Spacer()
                         Text("pon")
+                    }
+                    Divider()
+                    HStack(spacing: 12) {
+                        Text("○")
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text("Amazon – Tvoja narudžba je poslana")
+                            Foreground("666666") {
+                                Text("Poštovani, obavještavamo vas da je vaša narudžba #123-4567890-1234567 otpremljena. Procijenjena dostava: petak, 17. veljače. Praćenje pošiljke u prilogu.")
+                            }
+                        }
+                        Spacer()
+                        Text("uto")
                     }
                 }
             }

@@ -15,29 +15,35 @@ VStack(spacing: 0) {
     ScrollView {
         Padding(24) {
             VStack(spacing: 20) {
-                Text("Popularno na Netflixu")
-                HStack(spacing: 12) {
-                    Frame(width: 240, height: 135) {
+                Text("Popularno sada")
+                HStack(alignment: .top, spacing: 16) {
+                    Frame(width: 280, height: 158) {
                         Background("e50914") {
-                            RoundedRectangle(cornerRadius: 4)
+                            RoundedRectangle(cornerRadius: 8)
                         }
                     }
-                    VStack(spacing: 4) {
-                        Text("Naslov serije ili filma")
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Mračna zima")
                         Foreground("888888") {
-                            Text("Opis – drama, 2024")
+                            Text("Drama, triler · 2024 · 2 sezone")
                         }
+                        Text("U izoliranom gradu nakon globalne nestabilnosti grupa preživjelih otkriva da izvan zidova čeka nešto opasnije od hladnoće. Serija s nagrađivanom glumačkom postavom.")
                         Button("Reproduciraj") { }
                     }
-                    Frame(width: 240, height: 135) {
+                }
+                HStack(alignment: .top, spacing: 16) {
+                    Frame(width: 280, height: 158) {
                         Background("333333") {
-                            RoundedRectangle(cornerRadius: 4)
+                            RoundedRectangle(cornerRadius: 8)
                         }
                     }
-                    Frame(width: 240, height: 135) {
-                        Background("333333") {
-                            RoundedRectangle(cornerRadius: 4)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Zvijezde iza kamere")
+                        Foreground("888888") {
+                            Text("Komedija · 2023 · 1 sezona")
                         }
+                        Text("Dokumentarac o natjecateljskom showu koji prati ekipu iza scene. Glumci i redatelji otvoreno govore o stresu i smijehu. Kritičari hvale iskrenost.")
+                        Button("Reproduciraj") { }
                     }
                 }
                 Divider()

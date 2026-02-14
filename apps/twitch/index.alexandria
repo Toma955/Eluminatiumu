@@ -11,33 +11,38 @@ VStack(spacing: 0) {
     ScrollView {
         Padding(16) {
             VStack(spacing: 16) {
-                Text("Kategorije koje pratite")
-                HStack(spacing: 12) {
+                Text("Uzivo sada")
+                HStack(alignment: .top, spacing: 16) {
                     Frame(width: 280, height: 158) {
                         Background("9146ff") {
                             RoundedRectangle(cornerRadius: 8)
                         }
                     }
-                    VStack(spacing: 4) {
+                    VStack(alignment: .leading, spacing: 6) {
                         Text("Korisnik_123")
                         Foreground("888888") {
                             Text("Just Chatting · 1,2k gledatelja")
                         }
-                        Text("● UŽIVO")
+                        Text("● UZIVO")
+                        Text("Razgovor o novim igrama i tech vijestima. Pitanja i odgovori u chatu. Pridruzi se!")
                     }
+                }
+                HStack(alignment: .top, spacing: 16) {
                     Frame(width: 280, height: 158) {
-                        Background("9146ff") {
+                        Background("333333") {
                             RoundedRectangle(cornerRadius: 8)
                         }
                     }
-                    VStack(spacing: 4) {
+                    VStack(alignment: .leading, spacing: 6) {
                         Text("Streamer_xyz")
                         Foreground("888888") {
                             Text("Fortnite · 3,4k gledatelja")
                         }
-                        Text("● UŽIVO")
+                        Text("● UZIVO")
+                        Text("Ranked grind do prvih 100. Danas cilj top 50. Sub-only chat u zadnjoj uri.")
                     }
                 }
+                Divider()
                 Divider()
                 Text("Preporučeni kanali")
                 Grid {

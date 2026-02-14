@@ -1,3 +1,5 @@
+// Google app – pisano u Swift (DSL). Alexandria samo učitava ovaj Swift.
+// Za prikaz stranice (HTML/CSS/JS) app koristi Link prema google.com.
 VStack(spacing: 24) {
     Spacer()
     Image("globe")
@@ -5,14 +7,13 @@ VStack(spacing: 24) {
     TextField("Pretraži Google ili upiši URL")
     HStack(spacing: 12) {
         Button("Pretraži Google") { }
-        Button("Sretnem se") { }
     }
     Spacer()
     Foreground("666666") {
         VStack(spacing: 4) {
             Text("Hrvatska")
-            Text("Otvori google.hr")
+            Text("Otvori google.com")
         }
     }
-    Link("google.hr", "https://www.google.hr")
+    Link("google.com", "https://www.google.com")
 }

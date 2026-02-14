@@ -1,6 +1,6 @@
 /**
- * Eluminatium – pretraživač kataloga za Alexandria (app browser).
- * Pretražuje isključivo svoj katalog (data/catalog, apps). Nema pretrage na webu.
+ * Eluminatium – pretraživač za Alexandria (app browser).
+ * Ne pretražuje web – pretražuje samo ono što ima kod sebe u app library (katalog: data/catalog, apps).
  * Servira Swift aplikacije (index.alexandria / index.swift).
  */
 
@@ -189,7 +189,7 @@ function buildSearchIndex(apps) {
   }));
 }
 
-// Pretraga samo u katalogu (catalog + descriptions + keywords) – ne na webu
+// Pretraga samo u app library (katalog) – pretraživač ne pretražuje web
 app.get('/api/search', (req, res) => {
   const q = (req.query.q || '').toLowerCase().trim();
   const apps = loadAppsIndex();

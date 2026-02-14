@@ -1,9 +1,10 @@
+// Amazon – webapp s više proizvoda; puni opisi, klik = otvori stranicu proizvoda
 VStack(spacing: 0) {
     Background("232f3e") {
         Padding(12) {
             HStack(spacing: 12) {
                 Text("amazon")
-                TextField("Pretraži Amazon.hr")
+                TextField("Pretraži Amazon")
                 Button("Traži") { }
                 Text("Košarica")
             }
@@ -12,39 +13,58 @@ VStack(spacing: 0) {
     Divider()
     ScrollView {
         Padding(20) {
-            VStack(spacing: 16) {
-                HStack(spacing: 16) {
-                    Frame(width: 200, height: 200) {
+            VStack(alignment: .leading, spacing: 24) {
+                Text("Preporučeni proizvodi")
+                HStack(alignment: .top, spacing: 16) {
+                    Frame(width: 180, height: 180) {
                         Background("ffffff") {
                             RoundedRectangle(cornerRadius: 4)
                         }
                     }
-                    VStack(spacing: 8) {
-                        Text("Naziv proizvoda – kratki opis")
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Bežične slušalice – Studio Pro X")
                         Foreground("b12704") {
-                            Text("Cijena 29,99 €")
+                            Text("89,99 €")
                         }
                         Foreground("666666") {
-                            Text("Dostava: besplatna preko 49 €")
+                            Text("Ocjena 4,5 · 2.340 recenzija · Besplatna dostava preko 49 €")
                         }
+                        Text("Noise cancelling, 30 sati baterije, udoban dizajn. Kompatibilno s Bluetooth 5.2. Uključeno: futrola i kabel za punjenje.")
                         Button("Dodaj u košaricu") { }
                     }
-                    Spacer()
+                }
+                HStack(alignment: .top, spacing: 16) {
+                    Frame(width: 180, height: 180) {
+                        Background("f3f3f3") {
+                            RoundedRectangle(cornerRadius: 4)
+                        }
+                    }
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Knjiga: Povijest svijeta u 12 poglavlja")
+                        Foreground("b12704") {
+                            Text("24,99 €")
+                        }
+                        Foreground("666666") {
+                            Text("Tvrdi uvez · 480 str. · Dostava 2–3 dana")
+                        }
+                        Text("Bestseller koji obuhvaća ključne trenutke od prahistorije do danas. Autor je nagrađivani povjesničar. Idealno za poklon ili vlastitu biblioteku.")
+                        Button("Dodaj u košaricu") { }
+                    }
                 }
                 Divider()
-                Text("Preporučeno za tebe")
+                Text("Pregledani proizvodi")
                 HStack(spacing: 12) {
-                    Frame(width: 160, height: 160) {
+                    Frame(width: 120, height: 120) {
                         Background("f3f3f3") {
                             RoundedRectangle(cornerRadius: 4)
                         }
                     }
-                    Frame(width: 160, height: 160) {
+                    Frame(width: 120, height: 120) {
                         Background("f3f3f3") {
                             RoundedRectangle(cornerRadius: 4)
                         }
                     }
-                    Frame(width: 160, height: 160) {
+                    Frame(width: 120, height: 120) {
                         Background("f3f3f3") {
                             RoundedRectangle(cornerRadius: 4)
                         }

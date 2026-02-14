@@ -32,11 +32,19 @@ VStack(spacing: 0) {
                         RoundedRectangle(cornerRadius: 8)
                     }
                 }
-                VStack(spacing: 4) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text("@korisnik")
-                    Text("Opis kratkog videa #hashtag")
+                    Text("Putovanje kroz Hrvatsku – dan 3. Split i okolica. #hrvatska #travel #split")
                     Foreground("888888") {
-                        Text("Pjesma · Originalni zvuk")
+                        Text("Originalni zvuk · 45s")
+                    }
+                }
+                Spacer()
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("@creator_art")
+                    Text("Speed draw – portret za 60 sekundi. Koji sljedeci? #art #drawing #speedpaint")
+                    Foreground("888888") {
+                        Text("Zvuk u trendu · 58s")
                     }
                 }
             }

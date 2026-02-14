@@ -1,37 +1,57 @@
+// The New York Times – webapp s više članaka; klik na članak ili link učitava/otvara stranicu
 VStack(spacing: 0) {
     Padding(12) {
         HStack(spacing: 12) {
             Text("The New York Times")
             Spacer()
+            TextField("Pretraži vijesti")
             Button("Prijava") { }
         }
     }
     Divider()
     ScrollView {
         Padding(20) {
-            VStack(spacing: 16) {
-                Text("Glavna vijest dana – naslov članka")
+            VStack(alignment: .leading, spacing: 32) {
+                Text("Danas")
                 Foreground("666666") {
-                    Text("Podnaslov ili sažetak vijesti. Datum i autor.")
+                    Text("Petak, 14. veljače 2025.")
                 }
                 Divider()
-                Text("Prvi odlomak vijesti. Ovdje bi bio uvodni tekst članka u stilu NYT – vijesti, analize, komentari.")
-                Text("Nastavak članka. Drugi paragraf s više detalja i konteksta.")
-                Divider()
-                Text("Ostale vijesti")
-                HStack(spacing: 12) {
-                    Frame(width: 160, height: 100) {
-                        Background("eeeeee") {
-                            RoundedRectangle(cornerRadius: 4)
-                        }
-                    }
-                    VStack(spacing: 2) {
-                        Text("Druga vijest – kratki naslov")
-                        Foreground("888888") {
-                            Text("Kratki opis...")
-                        }
-                    }
+                Text("Europska unija postiže dogovor o klimatskom fondu, članovi obećavaju 50 milijardi do 2030.")
+                Foreground("888888") {
+                    Text("Autor: Maria Schmidt · Politika · 12 min čitanja")
                 }
+                Text("Vlade zemalja članica dogovorile su se u četvrtak o stvaranju zajedničkog fonda za zelenu tranziciju. Novac će ići u obnovljivu energiju i zaštitu obalnih područja. Kritičari upozoravaju da je rok ambiciozan, ali predsjednica komisije izrazila je optimizam.")
+                Text("„Ovo je povijesni korak za Europu i za planet“, izjavila je nakon sastanka. Fond će biti otvoren i za privatne ulagače koji žele pridonijeti ciljevima smanjenja emisija. Sljedeći sastanak planiran je u lipnju.")
+                Text("Ministri financija još nisu potvrdili sve detalje financiranja. Neke zemlje traže fleksibilnost za svoje energetske mixe. Analitičari očekuju da će pregovori o pojedinim nacionalnim doprinosima potrajati do jeseni.")
+                Link("Otvori članak na nytimes.com", "https://www.nytimes.com")
+                Divider()
+                Text("Tehnološki divovi objavili rezultate: rast zbog umjetne inteligencije veći od očekivanog.")
+                Foreground("888888") {
+                    Text("Autor: James Chen · Biznis · 8 min čitanja")
+                }
+                Text("Četiri najveće američke tech tvrtke premašile su procjene analitičara u posljednjem kvartalu. Prihodi povezani s AI proizvodima porasli su više od 40 posto u usporedbi s prošlom godinom. CEO jedne od tvrtki rekao je da je „era generativne inteligencije tek na početku“.")
+                Text("Investitori su reagirali pozitivno; dionice su skočile u after-hours trgovanju. Neki upozoravaju na precijenjenost i regulatorne rizike. Europska unija već priprema nove propise o transparentnosti AI sustava.")
+                Text("Zaposlenici u kreativnim industrijama izvještavaju o sve češćoj uporabi alata u svakodnevnom radu. Studije pokazuju miješane rezultate o produktivnosti, ali trend rasta ulaganja u AI ostaje jak.")
+                Link("Otvori članak na nytimes.com", "https://www.nytimes.com")
+                Divider()
+                Text("Šport: Prvenstvo u skijaškim skokovima odlučeno u zadnjoj seriji; pobjednik slavi s 0,3 boda prednosti.")
+                Foreground("888888") {
+                    Text("Šport · 5 min čitanja")
+                }
+                Text("Uz napetu atmosferu na velikoj skakaonici, favorit je odskočio u zadnjem krugu i srušio vodstvo dotadašnjeg prvaka. Publika je navijala do posljednjeg skakača. „Nisam vjerovao da ću uspjeti, ali danas je sve ispalo kako treba“, rekao je pobjednik novinarima.")
+                Text("Trener drugoplasirane reprezentacije pohvalio je taktičke odluke, ali priznao da je nedostajala sreća u ključnim trenucima. Sljedeće prvenstvo bit će za dvije godine u drugom europskom gradu.")
+                Link("Otvori članak na nytimes.com", "https://www.nytimes.com")
+                Divider()
+                Text("Kultura: Nova izložba u muzeju moderne umjetnosti privukla je 100.000 posjetitelja u prvom mjesecu.")
+                Foreground("888888") {
+                    Text("Kultura · 4 min čitanja")
+                }
+                Text("Retrospektiva radova umjetnika koji je preminuo prošle godine postavljena je u tri kata glavne zgrade. Kuratori su odabrali više od 200 djela iz privatnih i javnih zbirki. Kritičari ističu posebno odjeljak posvećen ranim eksperimentima s videom.")
+                Text("„Ovo je najveća izložba koja je ikad bila posvećena ovom autoru u našoj zemlji“, rekao je direktor muzeja. Kataloška publikacija prodana je u više od 15.000 primjeraka. Izložba traje do kraja travnja.")
+                Link("Otvori članak na nytimes.com", "https://www.nytimes.com")
+                Divider()
+                Text("Više vijesti")
                 Link("Otvori nytimes.com", "https://www.nytimes.com")
             }
         }
