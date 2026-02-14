@@ -1,56 +1,110 @@
+// Spotify – prepoznatljiv zeleno-crni izgled, play opcije
 VStack(spacing: 0) {
-    HStack(spacing: 0) {
-        VStack(spacing: 8) {
-            Padding(16) {
-                Text("Spotify")
+    Background("121212") {
+        HStack(alignment: .top, spacing: 0) {
+            Background("000000") {
+                Padding(12) {
+                    VStack(alignment: .leading, spacing: 0) {
+                        Padding(8) {
+                            Foreground("1db954") {
+                                HStack(spacing: 12) {
+                                    Image("music.note.list")
+                                    Text("Spotify")
+                                }
+                            }
+                        }
+                        Divider()
+                        List {
+                            Label("Domov", systemImage: "house.fill")
+                            Label("Pretraži", systemImage: "magnifyingglass")
+                            Label("Tvoja knjižnica", systemImage: "books.vertical.fill")
+                        }
+                    }
+                }
             }
             Divider()
-            List {
-                Label("Domov", systemImage: "house.fill")
-                Label("Pretraži", systemImage: "magnifyingglass")
-                Label("Tvoja knjižnica", systemImage: "books.vertical.fill")
+            ScrollView {
+                Background("121212") {
+                    Padding(24) {
+                        VStack(alignment: .leading, spacing: 24) {
+                            Text("Dobrodošli na Spotify")
+                            Text("Nastavi slušati")
+                            HStack(spacing: 16) {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Frame(width: 160, height: 160) {
+                                        Background("282828") {
+                                            RoundedRectangle(cornerRadius: 8)
+                                        }
+                                    }
+                                    Text("Naslov pjesme")
+                                    Foreground("b3b3b3") {
+                                        Text("Izvođač")
+                                    }
+                                }
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Frame(width: 160, height: 160) {
+                                        Background("282828") {
+                                            RoundedRectangle(cornerRadius: 8)
+                                        }
+                                    }
+                                    Text("Druga pjesme")
+                                    Foreground("b3b3b3") {
+                                        Text("Izvođač")
+                                    }
+                                }
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Frame(width: 160, height: 160) {
+                                        Background("282828") {
+                                            RoundedRectangle(cornerRadius: 8)
+                                        }
+                                    }
+                                    Text("Treća pjesme")
+                                    Foreground("b3b3b3") {
+                                        Text("Izvođač")
+                                    }
+                                }
+                            }
+                            Divider()
+                            Text("Otvori pravi Spotify:")
+                            Link("open.spotify.com", "https://open.spotify.com")
+                        }
+                    }
+                }
             }
         }
-        Divider()
-        ScrollView {
-            Padding(16) {
-                VStack(spacing: 16) {
-                    Text("Dobrodošli na Spotify")
-                    HStack(spacing: 12) {
-                        Frame(width: 160, height: 160) {
-                            Background("1db954") {
-                                RoundedRectangle(cornerRadius: 8)
-                            }
-                        }
-                        VStack(spacing: 4) {
-                            Text("Naslov pjesme")
-                            Foreground("888888") {
-                                Text("Izvođač · Album")
-                            }
-                            Button("Reproduciraj") { }
-                        }
-                        Spacer()
-                    }
-                    Divider()
-                    Text("Nastavi slušati")
-                    HStack(spacing: 12) {
-                        Frame(width: 80, height: 80) {
-                            Background("333333") {
-                                RoundedRectangle(cornerRadius: 4)
-                            }
-                        }
-                        Frame(width: 80, height: 80) {
-                            Background("333333") {
-                                RoundedRectangle(cornerRadius: 4)
-                            }
-                        }
-                        Frame(width: 80, height: 80) {
-                            Background("333333") {
-                                RoundedRectangle(cornerRadius: 4)
-                            }
+    }
+    Background("181818") {
+        Padding(12) {
+            HStack(spacing: 24) {
+                HStack(spacing: 16) {
+                    Frame(width: 56, height: 56) {
+                        Background("333333") {
+                            RoundedRectangle(cornerRadius: 4)
                         }
                     }
-                    Link("Otvori open.spotify.com", "https://open.spotify.com")
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Naslov pjesme")
+                        Foreground("b3b3b3") {
+                            Text("Izvođač")
+                        }
+                    }
+                }
+                Spacer()
+                Foreground("1db954") {
+                    HStack(spacing: 16) {
+                        Image("backward.fill")
+                        Image("play.fill")
+                        Image("forward.fill")
+                    }
+                }
+                Spacer()
+                HStack(spacing: 8) {
+                    Image("speaker.fill")
+                    Frame(width: 80, height: 4) {
+                        Background("535353") {
+                            RoundedRectangle(cornerRadius: 2)
+                        }
+                    }
                 }
             }
         }

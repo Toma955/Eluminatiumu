@@ -1,48 +1,147 @@
 VStack(spacing: 0) {
-    Background("1a1a1a") {
-        Padding(16) {
+    Background("212121") {
+        Padding(12) {
             HStack(spacing: 16) {
-                Image("play.rectangle.fill")
-                Text("YouTube")
+                Image("line.3.horizontal")
+                HStack(spacing: 4) {
+                    Image("play.rectangle.fill")
+                    Text("YouTube")
+                }
                 Spacer()
-                TextField("Pretraži")
-                Button("Prijava") { }
-            }
-        }
-    }
-    Divider()
-    ScrollView {
-        Padding(20) {
-            VStack(spacing: 20) {
-                Text("Preporučeno")
-                HStack(spacing: 16) {
-                    Frame(width: 280, height: 158) {
-                        Background("333333") {
-                            RoundedRectangle(cornerRadius: 8)
-                        }
-                    }
-                    VStack(spacing: 4) {
-                        Text("Naslov videa – kanal")
-                        Foreground("888888") {
-                            Text("Pregledi · prije 2 dana")
-                        }
-                    }
-                    Spacer()
-                    Frame(width: 280, height: 158) {
-                        Background("333333") {
-                            RoundedRectangle(cornerRadius: 8)
-                        }
-                    }
-                    VStack(spacing: 4) {
-                        Text("Drugi video – drugi kanal")
-                        Foreground("888888") {
-                            Text("Pregledi · prije 1 tjedan")
+                Frame(width: 400, height: 36) {
+                    Background("121212") {
+                        Padding(8) {
+                            TextField("Pretraži")
                         }
                     }
                 }
-                Divider()
-                Text("Otvori pravi YouTube:")
-                Link("youtube.com", "https://www.youtube.com")
+                Image("mic.fill")
+                Image("video.badge.plus")
+                Image("bell")
+                Circle()
+                Spacer()
+            }
+        }
+    }
+    HStack(alignment: .top, spacing: 0) {
+        Background("212121") {
+            Padding(12) {
+                VStack(alignment: .leading, spacing: 0) {
+                    HStack(spacing: 24) {
+                        Image("house.fill")
+                        Text("Početna")
+                    }
+                    HStack(spacing: 24) {
+                        Image("bolt.fill")
+                        Text("Shorts")
+                    }
+                    HStack(spacing: 24) {
+                        Image("rectangle.stack.fill")
+                        Text("Pretplate")
+                    }
+                    HStack(spacing: 24) {
+                        Image("play.rectangle.fill")
+                        Text("Biblioteka")
+                    }
+                    Divider()
+                }
+            }
+        }
+        ScrollView {
+            Background("0f0f0f") {
+                Padding(24) {
+                    VStack(alignment: .leading, spacing: 24) {
+                        Text("Preporučeno")
+                        HStack(alignment: .top, spacing: 16) {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Frame(width: 320, height: 180) {
+                                    Background("272727") {
+                                        RoundedRectangle(cornerRadius: 12)
+                                    }
+                                }
+                                HStack(alignment: .top, spacing: 12) {
+                                    Circle()
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("Naslov videa – kanal koji može biti duži")
+                                        Foreground("717171") {
+                                            Text("Kanal · 1,2 mln pregleda · prije 2 dana")
+                                        }
+                                    }
+                                }
+                            }
+                            VStack(alignment: .leading, spacing: 8) {
+                                Frame(width: 320, height: 180) {
+                                    Background("272727") {
+                                        RoundedRectangle(cornerRadius: 12)
+                                    }
+                                }
+                                HStack(alignment: .top, spacing: 12) {
+                                    Circle()
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("Kako napraviti nešto – tutorial")
+                                        Foreground("717171") {
+                                            Text("Tech Kanal · 45 tis. pregleda · prije 1 tjedan")
+                                        }
+                                    }
+                                }
+                            }
+                            VStack(alignment: .leading, spacing: 8) {
+                                Frame(width: 320, height: 180) {
+                                    Background("272727") {
+                                        RoundedRectangle(cornerRadius: 12)
+                                    }
+                                }
+                                HStack(alignment: .top, spacing: 12) {
+                                    Circle()
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("Muzika za rad i fokus")
+                                        Foreground("717171") {
+                                            Text("Lo-fi Beats · 2,1 mln pregleda · prije 1 mj.")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        Text("Brzi pregledi")
+                        HStack(alignment: .top, spacing: 16) {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Frame(width: 320, height: 180) {
+                                    Background("272727") {
+                                        RoundedRectangle(cornerRadius: 12)
+                                    }
+                                }
+                                HStack(alignment: .top, spacing: 12) {
+                                    Circle()
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("Gaming highlight – najbolji momenti")
+                                        Foreground("717171") {
+                                            Text("Gamer · 234 tis. pregleda · prije 5 dana")
+                                        }
+                                    }
+                                }
+                            }
+                            VStack(alignment: .leading, spacing: 8) {
+                                Frame(width: 320, height: 180) {
+                                    Background("272727") {
+                                        RoundedRectangle(cornerRadius: 12)
+                                    }
+                                }
+                                HStack(alignment: .top, spacing: 12) {
+                                    Circle()
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text("Recenzija novog uređaja")
+                                        Foreground("717171") {
+                                            Text("Review Hub · 67 tis. pregleda · prije 2 tjedna")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        Divider()
+                        Text("Otvori pravi YouTube:")
+                        Link("youtube.com", "https://www.youtube.com")
+                    }
+                }
             }
         }
     }

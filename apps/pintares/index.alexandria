@@ -1,0 +1,44 @@
+// Pintares webapp – galerija / medijska mapa (media folder)
+VStack(spacing: 0) {
+    Padding(16) {
+        HStack(spacing: 12) {
+            Image("photo.on.rectangle.angled")
+            Text("Pintares")
+            Spacer()
+        }
+    }
+    Divider()
+    Padding(16) {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Galerija i mediji")
+            Foreground("717171") {
+                Text("Sadržaj iz mape media – slike, video, datoteke.")
+            }
+            Divider()
+            Text("Mapa medija: media/")
+            ScrollView {
+                VStack(alignment: .leading, spacing: 12) {
+                    HStack(spacing: 12) {
+                        Frame(width: 120, height: 120) {
+                            Background("e8e8e8") {
+                                Image("photo.fill")
+                            }
+                        }
+                        Frame(width: 120, height: 120) {
+                            Background("e8e8e8") {
+                                Image("photo.fill")
+                            }
+                        }
+                        Frame(width: 120, height: 120) {
+                            Background("e8e8e8") {
+                                Image("photo.fill")
+                            }
+                        }
+                    }
+                    Text("Dodaj datoteke u apps/pintares/media/ da se prikažu ovdje.")
+                }
+            }
+        }
+    }
+    Spacer()
+}
